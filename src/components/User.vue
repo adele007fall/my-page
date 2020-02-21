@@ -17,8 +17,9 @@
       <v-flex xs12 sm6>
         <UserEdit></UserEdit>
       </v-flex>
-    </v-layout>
+    </v-layout> 
   </div>
+  
 </template>
 
 <script>
@@ -44,4 +45,5 @@ export default {
     }
   }
 }
+
 </script>

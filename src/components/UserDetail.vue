@@ -22,7 +22,7 @@ export default {
   },
   methods: {
     switchName (){
-      this.nameOfChild + 'computer'
+      this.nameOfChild = 'computer'
     }
   }
 }
