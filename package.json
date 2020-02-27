@@ -7,8 +7,10 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "bp-vuejs-dropdown": "^2.1.1",
     "core-js": "^3.6.4",
     "stylus-loader": "^3.0.2",
+    "swiper": "^5.3.1",
     "vue": "^2.6.11",
     "vue-router": "^3.1.5",
     "vuetify": "^2.2.11",
