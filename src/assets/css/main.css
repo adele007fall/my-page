@@ -1,5 +1,6 @@
 @charset "utf-8"; 
 
+/*       swiper        */
 #main .swiper-container {
     width: 100%;
     height: 500px;
@@ -9,13 +10,16 @@
     height: 500px; 
 }
 .swipe_img1 {
-    background: url(../img/slide_1.jpg) no-repeat center/cover;
+    background: url(../img/slide_img1.jpg) no-repeat center/cover;
 }
 .swipe_img2 {
-    background: url(../img/slide_1.jpg) no-repeat center/cover;
+    background: url(../img/slide_img2.jpg) no-repeat center/cover;
 }
 .swipe_img3 {
-    background: url(../img/slide_1.jpg) no-repeat center/cover;
+    background: url(../img/slide_img3.jpg) no-repeat center/cover;
+}
+.swipe_img4 {
+    background: url(../img/slide_4.jpg) no-repeat center/cover;
 }
 .swiper-slide { 
     display: block;
@@ -23,3 +27,31 @@
 .swiper-slide>div {
     height: 100%;
 }
+
+/*       section-wrap + section1           */
+
+.main-sec-wrap {
+    max-width: 1080px;
+    width: 100%;
+    margin: 0 auto;
+}
+.main-sec1 {
+    width: 100%; 
+    background: #fff;
+}
+.main-sec1 h2 {
+    background: #bd1600;
+    font-size: 30px;
+    font-weight: 900;
+    text-align: center; 
+}  
+.main-sec1 .product-wrap{
+    display: flex;
+    justify-content: space-around;
+} 
+.main-sec1 .product { 
+    display: inline-flex;
+    background: #000;
+    width: 22%;
+    height: 320px; 
+} 

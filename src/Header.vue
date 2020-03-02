@@ -49,7 +49,7 @@
   </div>
 </template>
 <script>
-import './assets/css/header.css'
+import './assets/css/common.css'
 import Vue from 'vue';
 import Dropdown from 'bp-vuejs-dropdown';
 

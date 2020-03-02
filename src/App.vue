@@ -2,13 +2,15 @@
   <div>
     <Header></Header> 
     <Main></Main>
+    <Footer></Footer>
   </div>
 </template> 
 <script> 
   import vue from 'vue';
   import Header from './Header';
-  import Main from './components/Main'
-  import Swiper from 'swiper'
+  import Footer from './components/Footer';
+  import Main from './components/Main';
+  import Swiper from 'swiper';
  
 
 import './assets/css/reset.css'
@@ -16,23 +18,10 @@ export default {
   name: 'App',
 
   components: { 
-    Header, 
-    Main
+    Header,
+    Footer, 
+    Main,
   }, 
 
-    mounted() {
-    this.swiper = new Swiper('.swiper-container', {
-      loop: true,
-      slidesPerView: 1,
-      autoHeight: true,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      autoplay: {
-        delay: 5000,
-      },
-    }) 
-  },
 };
 </script>
