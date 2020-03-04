@@ -19,14 +19,123 @@
     background: url(../img/slide_img3.jpg) no-repeat center/cover;
 }
 .swipe_img4 {
-    background: url(../img/slide_4.jpg) no-repeat center/cover;
-}
+    background: url(../img/slide_img4.jpg) no-repeat center/cover;
+} 
 .swiper-slide { 
     display: block;
-    height: 100% !important;}
+    height: 100% !important;
+}
 .swiper-slide>div {
     height: 100%;
 }
+
+.swiper-pagination-bullet {
+    margin: 0 3px;
+    width: 24px;
+    height: 2px;
+    display: inline-block;
+    border-radius: 0;
+    background: #000;
+    opacity: .2;
+}
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #fff;
+}
+/*          swiper layers            */
+.layer {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    position: relative;
+    width: 50%;
+    height: 100%; 
+    background: rgba(252, 252, 252, 0.8);
+    animation-duration: 3s;
+    animation-name: slideUp;
+}
+@keyframes slideUp {
+    from {
+        height: 0;
+    }
+    to {
+        height: 100%;
+    }
+} 
+.layer > div {
+    width: 50%;
+    position: relative;
+    left: 50%;
+    margin-left: -25%;
+    display: inline-flex;
+    flex-direction: column;
+}
+.layer > div > span {
+    font-size: 24px;
+    line-height: 32px;
+    color: #333;
+}
+.layer > div > p {
+    font-size: 30px;
+    line-height: 38px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+.layer > div > span:last-of-type {
+    margin-bottom: 10px;
+}
+.layer .button { 
+    cursor: pointer;
+    border: 1px solid #333;
+    font-size: 20px;
+    line-height: 28px; 
+    width: 160px;
+    display: flex;
+    justify-content: center;
+} 
+
+.button svg {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    margin: 6px 0;
+} 
+.swipe_img2 .layer {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    position: relative;
+    width: 50%;
+    height: 100%;
+    transform: translateX(100%);
+    background: rgba(0, 0, 0, .6);
+    animation-duration: 3s;
+    animation-name: slideLeft;
+}
+.swipe_img2 .layer > div > span {
+    color: #eee;
+}
+.swipe_img2 .layer .button {
+    color: #eee;
+    border: 1px solid #eee;
+}
+.swipe_img2 .button svg {
+    stroke: #eee;
+}
+@keyframes slideLeft {
+    from {
+        transform: translateX(150%);
+    }
+    to {
+        transform: translateX(100%);
+    }
+} 
+
+
+
+
+
+
 
 /*       section-wrap + section1           */
 
@@ -55,3 +164,7 @@
     width: 22%;
     height: 320px; 
 } 
+.main-sec2 .text-wrap {
+    display: flex;
+    flex-direction: column;
+}
