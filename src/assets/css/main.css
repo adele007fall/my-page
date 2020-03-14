@@ -80,25 +80,32 @@
     line-height: 38px;
     margin-bottom: 10px;
     font-weight: 600;
-}
-.layer > div > span:last-of-type {
-    margin-bottom: 10px;
-}
+} 
 .layer .button { 
     cursor: pointer;
     border: 1px solid #333;
+    font-weight: 600;
+    border-radius: 4px;
     font-size: 20px;
-    line-height: 28px; 
+    line-height: 38px; 
     width: 160px;
     display: flex;
     justify-content: center;
+    transition: .2s;
 } 
-
+.layer .button:hover {
+    border: 1px solid #0257a3;
+    background: #0257a3;
+    color: #eee;
+}
+.layer .button:hover svg {
+    stroke: #eee;
+}
 .button svg {
     width: 16px;
     height: 16px;
     display: inline-block;
-    margin: 6px 0;
+    margin: 10px 0;
 } 
 .swipe_img2 .layer {
     display: flex;
@@ -122,6 +129,25 @@
 .swipe_img2 .button svg {
     stroke: #eee;
 }
+.swipe_img3 .layer {
+    background: none;
+    right: 0;
+    position: absolute;
+}
+.swipe_img3 .layer > div::before {
+    content: "";
+    position: absolute;
+    display: inline-flex;
+    left: -170%;
+    top: -90px;
+    transform: rotateZ(125deg);
+    width: 370%;
+    height: 500%;
+    background: rgba(255, 219, 42, 0.35);
+}
+
+
+
 @keyframes slideLeft {
     from {
         transform: translateX(150%);
@@ -142,7 +168,7 @@
 .main-sec-wrap {
     max-width: 1080px;
     width: 100%;
-    margin: 0 auto;
+    margin: 40px auto;
 }
 .main-sec1 {
     width: 100%; 
@@ -165,6 +191,52 @@
     height: 320px; 
 } 
 .main-sec2 .text-wrap {
-    display: flex;
+    opacity: 0;
+    color: #444;
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    width: 50%;
+    height: auto;
+    display: inline-flex;
     flex-direction: column;
+} 
+.main-sec2 .main-sec-wrap.show .text-wrap span {
+    opacity: 0;
+}
+.main-sec2 .main-sec-wrap.show .text-wrap span {
+    opacity: 1;
+    animation-duration: 1s;
+    animation-name: text-left;
+} 
+.main-sec2 .main-sec-wrap.show .text-wrap span:nth-of-type(2) {
+    animation-duration: 2s;
+}
+.main-sec2 .main-sec-wrap.show .text-wrap span:last-of-type {
+    animation-duration: 3s;
+}
+@keyframes text-left {
+    from {
+        margin-left: -10px;
+    }
+    to {
+        margin-left: 0;
+    }
+} 
+.main-sec2 .main-sec-wrap {
+    display: flex;
+}
+.main-sec2 .main-sec-wrap.show .text-wrap{
+    opacity: 1;
+}
+/*      today's       */
+.main-sec-wrap .img-wrap > div {
+    background: url(../img/today_place.jpg) no-repeat center/contain;
+    width: 100%;
+    height: 500px;
+}
+.main-sec-wrap .img-wrap {
+    width: 50%;
+    display: inline-flex;
 }

@@ -95,17 +95,19 @@
           </div>
         </div> 
     </div>
-    <div class="main-sec2">
-      <div class="main-sec-wrap">
-        <div class="text-wrap">
-            <b>text</b>
-            <span>is</span>
-            <span>very</span>
-            <span>powerful</span>
-          </div>
+    <div id="text-wrap" class="main-sec2">
+      <h2>오늘의 공간</h2>
+      <div :class="['main-sec-wrap', {show:text_scroll}]" >
+        <div class="text-wrap"> 
+            <span>당신의 공간을 아름답게</span>
+            <span>꾸미기 위한</span>
+            <span>영감을 드립니다</span>
+        </div>
+        <div class="img-wrap">
           <div></div>
         </div>
       </div>
+    </div>
     </div>
     <div class="main-sec3">
       <div class="main-sec-wrap"></div>
@@ -122,11 +124,18 @@ import '../assets/css/main.css'
 export default { 
     title: 'main', 
     data() {
-    return {
-      Swiper: null,
-      SwiperAnimation: null,
-    }
+      return {
+        Swiper: null,
+        SwiperAnimation: null,
+        text_scroll: false,
+      }
+    }, 
+    beforeMount() {
+      window.addEventListener('scroll', this.textScroll)
     },
+    beforeDestroy() {
+      window.removeEventListener('scroll', this.textScroll)
+    }, 
     mounted() {
     const swiperAnimation = new SwiperAnimation();
     this.Swiper = new Swiper('.swiper-container', {
@@ -154,6 +163,23 @@ export default {
       //   delay: 5000,
       // },
     }) 
+  },
+  methods: {
+    textScroll(){
+      var target = document.getElementById('text-wrap')
+      if (target) {
+        const clientRect = target.getBoundingClientRect();
+        const relativeTop = clientRect.top;
+        const scrolledTopLength = window.pageYOffset;
+
+        this.text_ticker = scrolledTopLength + relativeTop
+      }
+      if (window.scrollY > this.text_ticker) {
+        this.text_scroll = true
+      } else {
+        this.text_scroll = false
+      }
+    }
   },
 }
 </script> 
