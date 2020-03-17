@@ -97,13 +97,35 @@
     </div>
     <div id="text-wrap" class="main-sec2">
       <h2>오늘의 공간</h2>
-      <div :class="['main-sec-wrap', {show:text_scroll}]" >
+      <div>
         <div class="text-wrap"> 
-            <span>당신의 공간을 아름답게</span>
-            <span>꾸미기 위한</span>
-            <span>영감을 드립니다</span>
+            <span data-aos="fade-up" 
+                  data-aos-delay="50"
+                  data-aos-duration="1000"
+                  data-aos-once="true">당신의 공간을 아름답게</span>
+            <span data-aos="fade-up" 
+                  data-aos-delay="70"
+                  data-aos-duration="1200"
+                  data-aos-once="true">꾸미기 위한</span>
+            <span data-aos="fade-up" 
+                  data-aos-delay="90"
+                  data-aos-duration="1400"
+                  data-aos-once="true">영감을 드립니다</span>  
+            <div class="check">
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 48c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m140.204 130.267l-22.536-22.718c-4.667-4.705-12.265-4.736-16.97-.068L215.346 303.697l-59.792-60.277c-4.667-4.705-12.265-4.736-16.97-.069l-22.719 22.536c-4.705 4.667-4.736 12.265-.068 16.971l90.781 91.516c4.667 4.705 12.265 4.736 16.97.068l172.589-171.204c4.704-4.668 4.734-12.266.067-16.971z"/></svg>
+                합리적인 가격을 보장합니다.
+              </span>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 48c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m140.204 130.267l-22.536-22.718c-4.667-4.705-12.265-4.736-16.97-.068L215.346 303.697l-59.792-60.277c-4.667-4.705-12.265-4.736-16.97-.069l-22.719 22.536c-4.705 4.667-4.736 12.265-.068 16.971l90.781 91.516c4.667 4.705 12.265 4.736 16.97.068l172.589-171.204c4.704-4.668 4.734-12.266.067-16.971z"/></svg>
+                만족스러운 제품리콜을 보증합니다.
+              </span> 
+              <div class="button">
+                go shop
+              </div>
+            </div> 
         </div>
-        <div class="img-wrap">
+        <div class="img-wrap" data-aos="fade-in">
           <div></div>
         </div>
       </div>
@@ -118,24 +140,27 @@
 <script> 
 import Swiper from 'swiper'
 import SwiperAnimation from 'swiper-animation';
+import AOS from 'aos'
 import 'swiper/css/swiper.min.css'
+import 'aos/dist/aos.css'
 import 'swiper/'
 import '../assets/css/main.css'
 export default { 
     title: 'main', 
     data() {
       return {
+        AOS:null,
         Swiper: null,
         SwiperAnimation: null,
-        text_scroll: false,
+        // text_scroll: false,
       }
     }, 
-    beforeMount() {
-      window.addEventListener('scroll', this.textScroll)
-    },
-    beforeDestroy() {
-      window.removeEventListener('scroll', this.textScroll)
-    }, 
+    // beforeMount() {
+    //   window.addEventListener('scroll', this.textScroll)
+    // },
+    // beforeDestroy() {
+    //   window.removeEventListener('scroll', this.textScroll)
+    // }, 
     mounted() {
     const swiperAnimation = new SwiperAnimation();
     this.Swiper = new Swiper('.swiper-container', {
@@ -164,22 +189,24 @@ export default {
       // },
     }) 
   },
-  methods: {
-    textScroll(){
-      var target = document.getElementById('text-wrap')
-      if (target) {
-        const clientRect = target.getBoundingClientRect();
-        const relativeTop = clientRect.top;
-        const scrolledTopLength = window.pageYOffset;
+  // methods: {
+  //   textScroll(){
+  //     var target = document.getElementById('text-wrap')
+  //     if (target) {
+  //       const clientRect = target.getBoundingClientRect();
+  //       const relativeTop = clientRect.top;
+  //       const scrolledTopLength = window.pageYOffset;
 
-        this.text_ticker = scrolledTopLength + relativeTop
-      }
-      if (window.scrollY > this.text_ticker) {
-        this.text_scroll = true
-      } else {
-        this.text_scroll = false
-      }
-    }
-  },
+  //       this.text_ticker = scrolledTopLength + relativeTop
+  //     }
+  //     if (window.scrollY > this.text_ticker) {
+  //       this.text_scroll = true
+  //     } else {
+  //       this.text_scroll = false
+  //     }
+  //   }
+  // },
 }
+AOS.init();
+
 </script> 

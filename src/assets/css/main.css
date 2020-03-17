@@ -165,10 +165,11 @@
 
 /*       section-wrap + section1           */
 
-.main-sec-wrap {
+#text-wrap > div {
     max-width: 1080px;
     width: 100%;
     margin: 40px auto;
+    display: flex;
 }
 .main-sec1 {
     width: 100%; 
@@ -190,8 +191,7 @@
     width: 22%;
     height: 320px; 
 } 
-.main-sec2 .text-wrap {
-    opacity: 0;
+.main-sec2 .text-wrap { 
     color: #444;
     font-size: 40px;
     line-height: 48px;
@@ -201,42 +201,44 @@
     height: auto;
     display: inline-flex;
     flex-direction: column;
-} 
-.main-sec2 .main-sec-wrap.show .text-wrap span {
-    opacity: 0;
-}
-.main-sec2 .main-sec-wrap.show .text-wrap span {
-    opacity: 1;
-    animation-duration: 1s;
-    animation-name: text-left;
-} 
-.main-sec2 .main-sec-wrap.show .text-wrap span:nth-of-type(2) {
-    animation-duration: 2s;
-}
-.main-sec2 .main-sec-wrap.show .text-wrap span:last-of-type {
-    animation-duration: 3s;
-}
-@keyframes text-left {
-    from {
-        margin-left: -10px;
-    }
-    to {
-        margin-left: 0;
-    }
-} 
+}  
 .main-sec2 .main-sec-wrap {
     display: flex;
-}
-.main-sec2 .main-sec-wrap.show .text-wrap{
-    opacity: 1;
-}
+} 
 /*      today's       */
-.main-sec-wrap .img-wrap > div {
+#text-wrap .img-wrap > div {
     background: url(../img/today_place.jpg) no-repeat center/contain;
     width: 100%;
     height: 500px;
 }
-.main-sec-wrap .img-wrap {
+#text-wrap .img-wrap {
     width: 50%;
     display: inline-flex;
+}
+.check {
+    margin-top: 30px;
+    font-size: 30px;
+    line-height: 38px;
+    font-weight: 500;
+}
+.check svg {
+    width: 25px;
+}
+.check span{
+    padding: 10px 0px;
+    display: block;
+}
+.check .button {
+    padding: 30px 0;
+    cursor: pointer; 
+    font-weight: 600; 
+    font-size: 30px;
+    line-height: 38px;
+    width: 160px; 
+    display: flex; 
+    justify-content: center; 
+    transition: .2s;
+}
+.check .button:hover {
+    color: #0058a3;
 }

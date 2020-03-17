@@ -7,6 +7,7 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "bp-vuejs-dropdown": "^2.1.1",
     "core-js": "^3.6.4",
     "stylus-loader": "^3.0.2",
