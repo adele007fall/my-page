@@ -78,9 +78,9 @@
 /*          footer start           */
 
 #footer {
-    background: #ccc1b5;
+    background: #0058a3;
     width: 100%;
-    height: 610px; 
+    height: 450px; 
 }
 .footer-wrap {
     max-width: 1080px;
@@ -98,11 +98,25 @@
 .depth1 > li >a {
     font-size: 18px; 
     font-weight: 600;
-    color: #333; 
+    color: #fff;
 }
 .depth1 > li > div {
     padding-top:20px;
 }
 .depth1 > li > div li {
     padding: 5px 0;
+    color: #999;
+}
+.depth1 > li > div li a {
+    color: #e9e9e9;
+}
+.depth1 > li > div li a:hover {
+    color: #fff;
+}
+.copy-write {
+    color: #e9e9e9;
+    text-align: center;
+}
+.copy-write span {
+    display: block;
 }

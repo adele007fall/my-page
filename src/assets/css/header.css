@@ -1,10 +1,15 @@
 @charset "utf-8"; 
-
-
+ 
 #header {
     background: #0058a3;
     width: 100%;
     font-family: 'NanumSquare';
+    z-index: 100;
+    position: fixed;
+
+} 
+#header.scroll .header-wrap{
+    display: none;
 }
 .header-wrap {
     width: 1080px;
@@ -28,8 +33,9 @@
     border-top: 2px solid #ffdb00;
     background: linear-gradient(#0270ce,#015aa7,#004d8e);
     display: flex;
+    position: relative;
     height: 40px; 
-} 
+}  
 .drop_menu-wrap {
     width: 1080px;
     margin: 0 auto;
@@ -49,6 +55,7 @@
 .drop_menu .bp-dropdown__body { 
     padding: 12px 0;
     left: 0 !important;
+    top: 38px !important;
     width: 100%;
     display: block;
 }

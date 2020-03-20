@@ -166,22 +166,25 @@
 /*       section-wrap + section1           */
 
 #text-wrap > div {
-    max-width: 1080px;
-    width: 100%;
-    margin: 40px auto;
+    background: #ccc1b554; 
+    width: 100%; 
     display: flex;
 }
 .main-sec1 {
     width: 100%; 
     background: #fff;
 }
-.main-sec1 h2 {
-    background: #bd1600;
-    font-size: 30px;
+.main-sec1 h2 { 
+    font-size: 34px;
+    line-height: 42px;
     font-weight: 900;
     text-align: center; 
+    margin: 20px 0;
 }  
 .main-sec1 .product-wrap{
+    width: 1080px;
+    margin: 0 auto;
+    margin-bottom: 40px;
     display: flex;
     justify-content: space-around;
 } 
@@ -191,12 +194,19 @@
     width: 22%;
     height: 320px; 
 } 
-.main-sec2 .text-wrap { 
-    color: #444;
+.main-sec2 h3 {
+    margin-bottom: 20px;
     font-size: 40px;
     line-height: 48px;
+}
+.main-sec2 .text-wrap { 
+    color: #444;
+    font-size: 34px;
+    line-height: 42px;
     font-weight: 900;
     letter-spacing: 4px;
+    margin-left: 4%;
+    margin-top: 40px;
     width: 50%;
     height: auto;
     display: inline-flex;
@@ -207,16 +217,16 @@
 } 
 /*      today's       */
 #text-wrap .img-wrap > div {
-    background: url(../img/today_place.jpg) no-repeat center/contain;
+    background: url(../img/today_place.jpg) no-repeat center/cover;
     width: 100%;
-    height: 500px;
+    height: 600px;
 }
 #text-wrap .img-wrap {
     width: 50%;
     display: inline-flex;
 }
 .check {
-    margin-top: 30px;
+    margin-top: 20px;
     font-size: 30px;
     line-height: 38px;
     font-weight: 500;
@@ -225,7 +235,7 @@
     width: 25px;
 }
 .check span{
-    padding: 10px 0px;
+    padding: 5px 0px;
     display: block;
 }
 .check .button {
@@ -241,4 +251,111 @@
 }
 .check .button:hover {
     color: #0058a3;
+}
+
+
+
+
+
+/*   main-sec3   */
+.main-sec3 h2 {
+    margin: 20px 0;
+    margin-top: 40px;
+    font-weight: 700;
+    color: #444;
+    font-size: 40px;
+    line-height: 48px;
+}
+.main-sec3 .main-sec-wrap {
+    max-width: 1080px;
+    width: 100%;
+    margin: 0 auto;
+}
+.main-sec3 .main-sec-wrap .services {
+    display: flex;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+.main-sec3 .main-sec-wrap .services >div {
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+.main-sec3 .main-sec-wrap span {
+    display: block;
+    color: #666;
+    padding-bottom: 5px;
+} 
+.main-sec3 .main-sec-wrap span:first-child {
+    font-size: 28px;
+    line-height: 36px;
+    padding-bottom: 10px;
+    font-weight: 600;
+    color: #444;
+}
+.main-sec3 .main-sec-wrap span a {
+    font-size: 20px;
+    line-height: 28px;
+    color: #444;
+} 
+.main-sec3 .main-sec-wrap span a:hover {
+    color: #000; 
+}
+.main-sec3 .main-sec-wrap .services .support_img {
+     background: url(../img/support_img1.jpg) no-repeat center/cover;
+     width: 300px;
+     height: 300px; 
+     margin-right: 40px;
+}
+.main-sec3 .main-sec-wrap .support_btn {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.main-sec3 .main-sec-wrap .support_btn a {
+    color: #0058a3;
+    border: 1px solid #0058a3;
+    padding: 10px 20px;
+    font-size: 20px; 
+    border-radius: 5px;
+    margin: 0 auto;
+    display: inline-block;
+}
+.main-sec3 .main-sec-wrap .support_btn a:hover {
+    color: #fff;
+    background: #0058a3;
+
+}
+.main-sec3 .main-sec-wrap .services:nth-of-type(2) .support_img{
+    background-image: url(../img/support_img2.jpg);
+}
+.main-sec3 .main-sec-wrap .services:nth-of-type(3) .support_img{
+    background-image: url(../img/support_img3.jpg);
+}
+.main-sec3 .main-sec-wrap .services:nth-of-type(4) .support_img{
+    background-image: url(../img/support_img4.jpg);
+}
+.main-sec3 .main-sec-wrap .services:nth-of-type(5) .support_img{
+    background-image: url(../img/support_img5.jpg);
+}
+
+.main-sec3 .main-sec-wrap .services:nth-of-type(6) .support_img{
+    background: #2199aa;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: column;
+}
+.main-sec3 .main-sec-wrap .services:nth-of-type(6) .support_img span {
+    width: 80%;
+    padding: 35px 45px;
+    text-align: center;
+    background: #f17f07;
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 38px;
+    color: white;
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 0px;
 }

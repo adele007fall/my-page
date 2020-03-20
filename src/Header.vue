@@ -1,11 +1,9 @@
 <template>
-  <div id="header">
+  <div id="header" :class=" {scroll: header_scroll}">
     <div class="header-wrap">
       <div class="scroll-hide">
         <div class="logo">
-        </div>
-        <div class=""> 
-        </div>
+        </div> 
       </div>
     </div>
     
@@ -50,11 +48,51 @@
 </template>
 <script>
 import './assets/css/common.css'
+import './assets/css/header.css'
 import Vue from 'vue';
 import Dropdown from 'bp-vuejs-dropdown';
+ 
 
 export default {
-  components: { Dropdown }
- 
+  components: { Dropdown },
+  data(){
+    return {
+      top_scroll: false,
+      header_scroll: true, 
+      head_ticker: null,
+    }
+  },
+   beforeMount() {
+      window.addEventListener('scroll', this.headerScroll)
+      window.addEventListener('scroll', this.handleScroll)
+    },
+    beforeDestroy() {
+      window.removeEventListener('scroll', this.headerScroll)
+      window.removeEventListener('scroll', this.handleScroll)
+    }, 
+  methods: {
+    // handleScroll() {
+    //   if (window.scrollY <= '110px') {
+    //     this.top_scroll = true
+    //   } else {
+    //     this.top_scroll = false
+    //   }
+    // },
+    headerScroll() {
+      var target = document.getElementById('header_show')
+      if (target) {
+        const clientRect = target.getBoundingClientRect();
+        const relativeTop = clientRect.top;
+        const scrolledTopLength = window.pageYOffset;
+
+        this.head_ticker = scrolledTopLength + relativeTop
+      }
+      if (window.scrollY > this.head_ticker) {
+        this.header_scroll = true
+      } else {
+        this.header_scroll = false
+      }
+    }
+  },
 }
 </script> 
