@@ -82,16 +82,44 @@
       <div class="main-sec-wrap">
         <div class="product-wrap">
           <div class="product">
-            <div class="produtc-img1"></div>
+            <a href="#">
+              <div class="prod_img produtc-img1"></div>
+              <div>
+                <span>HAMMARN 함마른</span>
+                <span>소파베드, 크니사 다크그레이, 블랙, 120 cm</span>
+                <span>￦ 99,000/개</span>
+              </div>
+            </a> 
           </div>
           <div class="product">
-            <div class="produtc-img2"></div>
+            <a href="#">
+              <div class="prod_img produtc-img2"></div>
+              <div>
+                <span>KYRRE 쉬레</span>
+                <span>스툴, 블랙</span>
+                <span>￦ 19,900/개</span>
+              </div>
+            </a> 
           </div>
           <div class="product">
-            <div class="produtc-img3"></div>
+            <a href="#">
+              <div class="prod_img produtc-img3"></div>
+              <div>
+                <span>SKOGSLÖK 스콕슬뢰크</span>
+                <span>인체공학적 베개, 여러 자세용, 40x75 cm</span>
+                <span>￦ 9,900/개</span>
+              </div>
+            </a> 
           </div>
           <div class="product">
-            <div class="produtc-img4"></div>
+            <a href="#">
+              <div class="prod_img produtc-img4"></div>
+              <div>
+                <span>HORNAVAN 호르나반</span>
+                <span>카트, 화이트, 26x48x77 cm</span>
+                <span>￦ 15,000/개</span>
+              </div>
+            </a> 
           </div>
         </div> 
     </div>
