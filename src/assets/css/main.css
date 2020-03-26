@@ -21,6 +21,7 @@
     background: url(../img/slide_img4.jpg) no-repeat center/cover;
 } 
 .swiper-slide { 
+    overflow: hidden;
     display: block;
     height: 100% !important;
 }
@@ -145,7 +146,7 @@
     transform: rotateZ(125deg);
     width: 370%;
     height: 500%;
-    background: rgba(255, 219, 42, 0.35);
+    background: rgba(255, 219, 42, 0.5);
 }
 
 
@@ -214,6 +215,7 @@
 }
 .main-sec1 .product span {
     color: #333;   
+    text-align: center;
     font-size: 14px;
     line-height: 22px;
     display: inline-flex;
@@ -284,21 +286,32 @@
     display: block;
 }
 .check .button {
+    position: relative;
     flex-direction: column;
     padding: 30px 0;
     cursor: pointer; 
     font-weight: 600; 
     font-size: 30px;
-    line-height: 38px;
-    width: 160px; 
-    display: flex; 
+    line-height: 38px; 
+    display: inline-block; 
     justify-content: center; 
-    transition: .2s;
+    transition: .2s; 
+}
+.check .button::after {
+    display:block;
+    content: '';
+    border-bottom: solid 3px #0058a3;  
+    transform: scaleX(0);
+    transition:  transform 250ms ease-in-out;
 }
 .check .button:hover {
     color: #0058a3;
 }
-
+.check .button:hover::after {
+    display: block;
+    transform-origin: 0% 50%;
+    transform: scaleX(1); 
+}
 
 
 
@@ -498,12 +511,16 @@
     }
  } 
  @media (max-width:500px){
+    .swiper-button {
+        display: none;
+    }
     .swipe_img3 .layer > div::before { 
         left: -110%;
-        top: -100px;
+        top: -180px;
+        transform: rotateZ(205deg);
     }
     #text-wrap > div {
-        padding: 20px;
+        padding: 40px 20px;
         display: block;
     }
     .main-sec2 .text-wrap {
@@ -530,5 +547,14 @@
     }
     .main-sec3 .main-sec-wrap span:first-child {
         padding-top: 20px;
+    }
+ }
+ @media (max-width:400px){
+     .main-sec1 .product-wrap {
+         margin-bottom: 40px;
+     }
+     .layer .button {
+        font-size: 14px;
+        width: 110px;
     }
  }

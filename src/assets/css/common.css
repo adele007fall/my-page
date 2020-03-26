@@ -162,6 +162,8 @@
         border: none;
     }
     .mobile .bp-dropdown__body {
+        top: 22px !important;
+        position: absolute;
         left: 0 !important;
         width: 100%;
         display: flex;
@@ -182,6 +184,8 @@
         border-bottom: 1px solid #000;
     }
     .drop_foot {
+        text-align: center;
+        position: relative; 
         padding: 0 20px;
         display: flex;
         justify-content: center;
@@ -207,5 +211,10 @@
     }
     .footer-wrap .logo {
         background-size: 110px 50px;
+    }
+}
+@media (max-width:400px){
+    #footer {
+        height: 290px;
     }
 }
