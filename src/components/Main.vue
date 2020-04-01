@@ -106,7 +106,7 @@
               <div class="prod_img produtc-img3"></div>
               <div>
                 <span>SKOGSLÖK 스콕슬뢰크</span>
-                <span>인체공학적 베개, 여러 자세용, 40x75 cm</span>
+                <span>인체공학적 베개, 40x75 cm</span>
                 <span>￦ 9,900/개</span>
               </div>
             </a> 
@@ -357,9 +357,9 @@ export default {
         el: '.swiper-pagination',
         type: 'bullets',
       },
-      // autoplay: {
-      //   delay: 5000,
-      // },
+      autoplay: {
+        delay: 5000,
+      },
     }) 
   },
   // methods: {

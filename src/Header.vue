@@ -43,6 +43,37 @@
         </dropdown>
       </div>
       </div>
+      <div class="ham_btn" @click="mobileMenu">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+
+    <div v-if="mobile_menu" class="aside_bg"></div>
+    <div v-if="mobile_menu" class="aside">
+      <span class="aside_close" @click="mobile_menu = false">
+        <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.45,12,16.71,8.7,15.29,7.3,12,10.59,8.74,7.32,7.33,8.75,10.62,12,7.36,15.3l1.42,1.4L12,13.41l3.32,3.26,1.41-1.42Z"></path></svg>
+      </span>
+      <!-- aside depth start -->
+      <div>
+        <p class="aside_depth1"> 
+            <span @click="as_menu = !as_menu">이달의 혜택</span> 
+        </p>
+        <ul v-if="as_menu" class="aside_depth2">
+          <li><a href="">집에서 행복하게</a></li>
+          <li><a href="">더 낮은 새로운 가격</a></li>
+          <li><a href="">평일 특가</a></li>
+          <li><a href="">똑똑한 주방 15% OFF</a></li>
+          <li><a href="">마지막 찬스</a></li>
+          <li><a href="">IKEA Family 특별가</a></li>
+          <li><a href="">홈퍼니싱 레시피</a></li>
+          <li><a href="">신제품</a></li> 
+        </ul>
+
+      </div>
     </div>
   </div>
 </template>
@@ -57,6 +88,8 @@ export default {
   components: { Dropdown },
   data(){
     return {
+      mobile_menu: false, 
+      as_menu: false,
       top_scroll: false,
       header_scroll: true, 
       head_ticker: null,
@@ -78,6 +111,9 @@ export default {
     //     this.top_scroll = false
     //   }
     // },
+    mobileMenu() {
+      this.mobile_menu = !this.mobile_menu
+    },
     headerScroll() {
       var target = document.getElementById('header_show')
       if (target) {
