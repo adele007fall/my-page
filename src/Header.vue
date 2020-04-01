@@ -59,8 +59,10 @@
       </span>
       <!-- aside depth start -->
       <div>
-        <p class="aside_depth1"> 
-            <span @click="as_menu = !as_menu">이달의 혜택</span> 
+        <p class="aside_depth1" :class="{active:isActive}" v-on:click="downArrow"> 
+            <span @click="as_menu = !as_menu">이달의 혜택
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.71,9.29,18.29,7.88,12,14.17,5.7,7.88,4.29,9.3,12,17Z"></path></svg>   
+            </span> 
         </p>
         <ul v-if="as_menu" class="aside_depth2">
           <li><a href="">집에서 행복하게</a></li>
@@ -72,7 +74,42 @@
           <li><a href="">홈퍼니싱 레시피</a></li>
           <li><a href="">신제품</a></li> 
         </ul>
-
+        <!-- aside depth start -->
+        <p class="aside_depth1" :class="{active:isActive_2}" v-on:click="downArrow_2"> 
+            <span @click="as_menu2 = !as_menu2">이달의 혜택
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.71,9.29,18.29,7.88,12,14.17,5.7,7.88,4.29,9.3,12,17Z"></path></svg> 
+            </span>  
+        </p>
+        <ul v-if="as_menu2" class="aside_depth2">
+          <li><a href="">집에서 행복하게</a></li>
+          <li><a href="">더 낮은 새로운 가격</a></li>
+          <li><a href="">평일 특가</a></li>
+          <li><a href="">똑똑한 주방 15% OFF</a></li>
+          <li><a href="">마지막 찬스</a></li>
+          <li><a href="">IKEA Family 특별가</a></li>
+          <li><a href="">홈퍼니싱 레시피</a></li>
+          <li><a href="">신제품</a></li> 
+        </ul>
+        <!-- aside depth start -->
+        <p class="aside_depth1" :class="{active:isActive_3}" v-on:click="downArrow_3"> 
+            <span v-on:click="as_menu3 = !as_menu3">이달의 혜택33 
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.71,9.29,18.29,7.88,12,14.17,5.7,7.88,4.29,9.3,12,17Z"></path></svg> 
+            </span>
+        </p>
+        <ul v-if="as_menu3" class="aside_depth2">
+          <li><a href="">집에서 행복하게</a></li>
+          <li><a href="">더 낮은 새로운 가격</a></li>
+          <li><a href="">평일 특가</a></li>
+          <li><a href="">똑똑한 주방 15% OFF</a></li>
+          <li><a href="">마지막 찬스</a></li>
+          <li><a href="">IKEA Family 특별가</a></li>
+          <li><a href="">홈퍼니싱 레시피</a></li>
+          <li><a href="">신제품</a></li> 
+        </ul>
+        <!-- aside(support)-->
+        <p class="aside_depth1"> 
+            <span>IKEA Family</span> 
+        </p> 
       </div>
     </div>
   </div>
@@ -88,8 +125,13 @@ export default {
   components: { Dropdown },
   data(){
     return {
+      isActive: false,
+      isActive_2: false,
+      isActive_3: false,
       mobile_menu: false, 
       as_menu: false,
+      as_menu2:false,
+      as_menu3:false,
       top_scroll: false,
       header_scroll: true, 
       head_ticker: null,
@@ -111,6 +153,15 @@ export default {
     //     this.top_scroll = false
     //   }
     // },
+    downArrow: function() {
+      this.isActive = !this.isActive; 
+    },
+    downArrow_2: function() {
+      this.isActive_2 = !this.isActive_2; 
+    },
+    downArrow_3: function() {
+      this.isActive_3 = !this.isActive_3; 
+    },
     mobileMenu() {
       this.mobile_menu = !this.mobile_menu
     },

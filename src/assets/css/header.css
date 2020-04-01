@@ -113,7 +113,7 @@
         right: 40px;
         width: 27px;
         height: 23px; 
-        z-index: 100;
+        z-index: 70;
         position: absolute;
         right: 0;
     }
@@ -145,6 +145,7 @@
     .aside {
         display: block;
         position: fixed;
+        overflow-y: scroll;
         z-index: 99;
         top: 0;
         right: 0;
@@ -170,8 +171,52 @@
         line-height: 0;
         transform: translate(-50%, -50%);
     }
+    .aside_depth1 {
+        position: relative;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .aside_depth1 span {
+        display: block;
+        position: relative;
+        padding: 1.25rem 2rem 1.25rem 1rem;
+        font-size: 18px;
+        font-weight: 700;
+    }
+    .aside_depth1 svg {
+        width: 20px;
+        position: absolute; 
+        transition: .5s;
+        top: 35%;
+        right: 10px;
+    }
+    .aside_depth1 span:before {
+        content: "";
+        left: 0;
+        top: 0;
+        position: absolute;
+        width: 0;
+        height: 100%;
+        background: #0058a3;
+        opacity: .8;
+        z-index: -1;
+        -webkit-transition: .5s ease;
+        transition: .5s ease;
+    }
+    .aside_depth1 span:hover:before {
+        width: 100%;
+    }
+    .aside_depth1.active svg{
+        transform: rotate(180deg);
+    }
+    .aside_depth2 a{
+        font-size: 18px;
+        display: block;
+        padding: 1rem 2rem 1rem 0rem;
+        margin: 0 20px;
+        color: black;
+    }
 }
-
 @media (max-width:400px){
     .drop_menu .bp-dropdown__btn {
         font-size: 12px; 
