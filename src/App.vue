@@ -1,12 +1,15 @@
 <template>
   <div>
     <Header></Header> 
-      <router-view></router-view>
+      <router-link :to="{ name: 'home' }"></router-link>
+      <router-view />
     <Footer></Footer>
   </div>
 </template> 
 <script> 
+
   import vue from 'vue';
+  import VueRouter from "vue-router";
   import Header from './Header';
   import Footer from './components/Footer'; 
   import Swiper from 'swiper';
