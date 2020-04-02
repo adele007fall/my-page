@@ -1,15 +1,14 @@
 <template>
   <div>
     <Header></Header> 
-    <Main></Main>
+      <router-view></router-view>
     <Footer></Footer>
   </div>
 </template> 
 <script> 
   import vue from 'vue';
   import Header from './Header';
-  import Footer from './components/Footer';
-  import Main from './components/Main';
+  import Footer from './components/Footer'; 
   import Swiper from 'swiper';
   
  
@@ -20,8 +19,7 @@ export default {
 
   components: { 
     Header,
-    Footer, 
-    Main,
+    Footer,  
   },
 };
 </script>
