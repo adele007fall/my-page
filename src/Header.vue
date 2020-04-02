@@ -52,13 +52,18 @@
       </div>
     </div>
 
-    <div v-if="mobile_menu" class="aside_bg"></div>
+    <div v-if="mobile_menu" class="aside_bg">  
+    </div>
     <div v-if="mobile_menu" class="aside">
-      <span class="aside_close" @click="mobile_menu = false">
-        <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.45,12,16.71,8.7,15.29,7.3,12,10.59,8.74,7.32,7.33,8.75,10.62,12,7.36,15.3l1.42,1.4L12,13.41l3.32,3.26,1.41-1.42Z"></path></svg>
-      </span>
       <!-- aside depth start -->
       <div>
+        <p class="aside_depth1">
+          <a href="">
+            <span>
+              매장 안내
+            </span>
+          </a>
+        </p>
         <p class="aside_depth1" :class="{active:isActive}" v-on:click="downArrow"> 
             <span @click="as_menu = !as_menu">이달의 혜택
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.71,9.29,18.29,7.88,12,14.17,5.7,7.88,4.29,9.3,12,17Z"></path></svg>   
@@ -106,11 +111,51 @@
           <li><a href="">홈퍼니싱 레시피</a></li>
           <li><a href="">신제품</a></li> 
         </ul>
-        <!-- aside(support)-->
+        <!-- aside depth start -->
         <p class="aside_depth1"> 
-            <span>IKEA Family</span> 
-        </p> 
+            <a href="#">
+              <span>
+                더 낮은 새로운 가격
+              </span>
+            </a>
+          </p> 
+        <!-- aside(support)-->
+        <div>
+          <p class="aside_depth1"> 
+            <a href="#">
+              <span>
+                IKEA Family
+              </span>
+            </a>
+          </p> 
+          <p class="aside_depth1"> 
+            <a href="#">
+              <span>
+                고객지원
+              </span>
+            </a>
+          </p> 
+          <p class="aside_depth1"> 
+            <a href="#">
+              <span>
+                배송조회
+              </span>
+            </a>
+          </p> 
+          <p class="aside_depth1"> 
+            <a href="#">
+              <span>
+                신제품
+              </span>
+            </a>
+          </p> 
+        </div> 
       </div>
+    </div>
+    <div class="aside_close_wrap" v-if="mobile_menu"> 
+      <span class="aside_close" @click="mobile_menu = false">
+        <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.45,12,16.71,8.7,15.29,7.3,12,10.59,8.74,7.32,7.33,8.75,10.62,12,7.36,15.3l1.42,1.4L12,13.41l3.32,3.26,1.41-1.42Z"></path></svg>
+      </span>
     </div>
   </div>
 </template>
