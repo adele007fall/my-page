@@ -2,7 +2,7 @@
   <div id="header" :class=" {scroll: header_scroll}">
     <div class="header-wrap">
       <div class="scroll-hide">
-        <div class="logo">
+        <div class="logo" @click="$router.push({path:'/'})">
         </div> 
       </div>
     </div>
@@ -10,7 +10,7 @@
     <div class="always-show">
       <div class="drop_menu-wrap">
       <div class="drop_menu">
-        <dropdown>
+        <dropdown :close-on-click="true" >
           <template slot="btn">모든 제품</template>
           <template slot="body">
             <ul>

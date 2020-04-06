@@ -10,7 +10,7 @@
                   <span>새 분위기로 바꿔보세요!</span>
                   <p>2020.4.1 ~ 2020.5.5</p>
  
-                  <div class="button">
+                  <div class="button" @click="$router.push({path:'/campaign'})">
                     <span>자세히 보기</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="4" y1="12" x2="20" y2="12"/> <polyline points="14 6 20 12 14 18"/>
