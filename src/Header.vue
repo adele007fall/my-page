@@ -162,9 +162,9 @@
 <script>
 import './assets/css/common.css'
 import './assets/css/header.css'
-import Vue from 'vue';
-import Dropdown from 'bp-vuejs-dropdown';
- 
+import Vue from 'vue'
+import Dropdown from 'bp-vuejs-dropdown'
+
 
 export default {
   components: { Dropdown },
@@ -178,7 +178,7 @@ export default {
       as_menu2:false,
       as_menu3:false,
       top_scroll: false,
-      header_scroll: true, 
+      header_scroll: false, 
       head_ticker: null,
     }
   },
@@ -191,13 +191,13 @@ export default {
       window.removeEventListener('scroll', this.handleScroll)
     }, 
   methods: {
-    // handleScroll() {
-    //   if (window.scrollY <= '110px') {
-    //     this.top_scroll = true
-    //   } else {
-    //     this.top_scroll = false
-    //   }
-    // },
+    handleScroll() {
+      if (window.scrollY > 120) {
+        this.header_scroll = true
+      } else {
+        this.header_scroll = false
+      }
+    },
     downArrow: function() {
       this.isActive = !this.isActive; 
     },
@@ -210,21 +210,21 @@ export default {
     mobileMenu() {
       this.mobile_menu = !this.mobile_menu
     },
-    headerScroll() {
-      var target = document.getElementById('header_show')
-      if (target) {
-        const clientRect = target.getBoundingClientRect();
-        const relativeTop = clientRect.top;
-        const scrolledTopLength = window.pageYOffset;
+    // headerScroll() {
+    //   var target = document.getElementById('header_show')
+    //   if (target) {
+    //     const clientRect = target.getBoundingClientRect();
+    //     const relativeTop = clientRect.top;
+    //     const scrolledTopLength = window.pageYOffset;
 
-        this.head_ticker = scrolledTopLength + relativeTop
-      }
-      if (window.scrollY > this.head_ticker) {
-        this.header_scroll = true
-      } else {
-        this.header_scroll = false
-      }
-    }
+    //     this.head_ticker = scrolledTopLength + relativeTop
+    //   }
+    //   if (window.scrollY > this.head_ticker) {
+    //     this.header_scroll = true
+    //   } else {
+    //     this.header_scroll = false
+    //   }
+    // }
   },
 }
 </script> 

@@ -5,14 +5,15 @@
     width: 100%;
     font-family: 'NanumSquare';
     z-index: 100;
-    position: fixed;
+    position: relative;
 
 } 
 .aside_close_wrap {
     display: none;
 }
-#header.scroll .header-wrap{
-    display: none;
+#header.scroll{
+    position: fixed;
+    top: -120px;
 } 
 .header-wrap {
     width: 100%;
@@ -238,6 +239,11 @@
     }
     .aside_depth2 li:last-child a{
         border: none;
+    }
+}
+@media (max-width:670px){
+    .drop_menu .bp-dropdown__body ul {
+        padding: 0 20px;
     }
 }
 @media (max-width:400px){

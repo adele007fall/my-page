@@ -8,7 +8,7 @@
 <script> 
   import vue from 'vue';
 
-import VueRouter from 'vue-router'
+  import VueRouter from 'vue-router'
   import Header from './Header';
   import Footer from './components/Footer'; 
   import Swiper from 'swiper';
@@ -20,6 +20,7 @@ export default {
   name: 'App',
 
   components: { 
+    VueRouter,
     Header,
     Footer,  
   },
