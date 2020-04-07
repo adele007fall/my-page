@@ -95,10 +95,7 @@
         padding: 0 20px;
     }
 }
-@media (max-width:768px){
-    #header .header-wrap {
-        display: none;
-    }
+@media (max-width:768px){ 
     .drop_menu .bp-dropdown__body ul {
         width: 100%;
     }

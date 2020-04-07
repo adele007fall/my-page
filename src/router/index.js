@@ -35,14 +35,14 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: Main
   }, 
-  // {
-  //   path: '/campaign',
-  //   name: 'campaign',
-  //   // route level code-splitting
-  //   // this generates a separate chunk (about.[hash].js) for this route
-  //   // which is lazy-loaded when the route is visited.
-  //   component: Campaign
-  // }, 
+  {
+    path: '/campaign',
+    name: 'campaign',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: Campaign
+  }, 
   {
     path: '/*',
     redirect: {name:'Home'},
