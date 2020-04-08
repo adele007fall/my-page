@@ -16,6 +16,9 @@ const Campaign = () => {
 const Today = () => {
   return import(/* webpackChunkName: "Today" */ '../components/Today.vue')
 }
+const Support = () => {
+  return import(/* webpackChunkName: "Support" */ '../components/Support.vue')
+}
 const routes = [
   {
     path: '/',
@@ -53,6 +56,14 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: Today
+  }, 
+  {
+    path: '/support',
+    name: 'Support',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: Support
   }, 
   {
     path: '/*',

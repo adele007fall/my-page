@@ -6,6 +6,7 @@
   </div>
 </template> 
 <script> 
+  
   import vue from 'vue';
 
   import VueRouter from 'vue-router'
