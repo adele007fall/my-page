@@ -9,25 +9,25 @@
                     data-aos-delay="50"
                     data-aos-duration="2400"
                     data-aos-once="true"> </div>
-                <div class="campa1_text">
-                <h2 data-aos="fade-up" 
-                    data-aos-delay="50"
-                    data-aos-duration="1000"
-                    data-aos-once="true">산뜻하고 여유로운 초록빛
-                </h2>
-                <div class="texts" data-aos="fade-up" 
-                    data-aos-delay="50"
-                    data-aos-duration="1000"
-                    data-aos-once="true">
-                    따스한 색과 편안한 분위기가 어우러진 침실은 
-                    <br>
-                    휴식과 재충전을 위한 공간뿐만 아니라 
-                    <br>
-                    나만의 세계에서 일에만 온전히 집중할 수 있는 
-                    <br>
-                    작업 공간도 될 수 있어요.
-                </div>
-            </div>
+                <parallax class="campa1_text" :sectionClass="campa1_text" :parallax="false" fixed="true" :speed-factor="0.15" direction="down" >
+                    <h2 data-aos="fade-up" 
+                        data-aos-delay="50"
+                        data-aos-duration="1000"
+                        data-aos-once="true">산뜻하고 여유로운 초록빛
+                    </h2>
+                    <div class="texts" data-aos="fade-up" 
+                        data-aos-delay="50"
+                        data-aos-duration="1000"
+                        data-aos-once="true">
+                        따스한 색과 편안한 분위기가 어우러진 침실은 
+                        <br>
+                        휴식과 재충전을 위한 공간뿐만 아니라 
+                        <br>
+                        나만의 세계에서 일에만 온전히 집중할 수 있는 
+                        <br>
+                        작업 공간도 될 수 있어요.
+                    </div>
+                </parallax>
                 </div>
             <div class="content"> 
                 <div class="productions">
@@ -80,19 +80,22 @@
 </template>
 <script> 
 import AOS from 'aos'
+import Parallax from 'vue-parallaxy'
 import VueRouter from 'vue-router'
 import '../assets/css/today.css'
 import '../assets/css/common.css' 
 import 'aos/dist/aos.css'
 
 export default {
-    components: {  },
+    components: {Parallax },
     title: 'campaign',
     data() {
         return {
             AOS: null,
+            fixed_text: false,
         }
-    }
+    },
+    methods: {}
 }
 AOS.init();
 </script>

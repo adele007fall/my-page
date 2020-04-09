@@ -1,5 +1,7 @@
 <template>
   <div class="support"> 
+
+      <h1></h1>
       <h1>파일</h1>
       <input id="file-selector" ref="file" type="file" @change="handleFileUpload()">
       <button @click="upload">업로드</button>

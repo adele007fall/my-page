@@ -178,8 +178,7 @@ export default {
       as_menu2:false,
       as_menu3:false,
       top_scroll: false,
-      header_scroll: false, 
-      head_ticker: null,
+      header_scroll: false,  
     }
   },
    beforeMount() {
