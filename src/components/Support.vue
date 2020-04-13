@@ -8,7 +8,7 @@
   </div>
 </template>
 <script>
-import AWS from 'aws-sdk' 
+import AWS from "aws-sdk" 
 export default {
     data(){
         return {
@@ -23,17 +23,17 @@ export default {
           this.file = this.$refs.file.files[0] 
         },
         upload() { 
-            AWS.config.update({
-                region: this.bucketRegion,
-                credentials: new AWS.CognitoIdentityCredentials({
-                    IdentityPoolId: this.IdentityPoolId
-                })
-            })
             const s3 = new AWS.S3({
             apiVersion: "2006-03-01",
             params: { 
                 Bucket: this.albumBucketName 
                 }
+            })
+            AWS.config.update({
+                region: this.bucketRegion,
+                credentials: new AWS.CognitoIdentityCredentials({
+                    IdentityPoolId: "ap-northeast-2:fd1ff6f1-eff0-4cd2-8771-85a1d80d162b"
+                })
             })
             let photoKey = this.file.name
             
