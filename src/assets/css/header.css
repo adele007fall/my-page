@@ -185,7 +185,9 @@
         position: relative;
         border-bottom: 1px solid #cecece;
     }
-    
+    .aside_depth1 > a {
+        cursor: pointer;
+    }
     .aside_depth1 span {
         color: black;
         display: block;

@@ -1,10 +1,9 @@
 <template>
   <div class="support"> 
 
-      <h1></h1>
-      <h1>파일</h1>
-      <input id="file-selector" ref="file" type="file" @change="handleFileUpload()">
-      <button @click="upload">업로드</button>
+      <h1>고객지원</h1>  
+    <input id="file-selector" ref="file" type="file" @change="handleFileUpload()">
+    <button @click="upload">업로드</button>
   </div>
 </template>
 <script>
@@ -12,6 +11,7 @@ import AWS from "aws-sdk"
 export default {
     data(){
         return {
+            text:null,
             file:null,
             albumBucketName : "moongoodstone",
             bucketRegion : "ap-northeast-2",
@@ -20,6 +20,7 @@ export default {
     }, 
     methods: {
       handleFileUpload() {
+          this.text = this.$refs.text.texts[0]
           this.file = this.$refs.file.files[0] 
         },
         upload() { 

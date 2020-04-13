@@ -190,6 +190,9 @@
         display: flex;
         justify-content: center;
     }
+    .drop_foot .body a {
+        cursor: pointer;
+    }
     .copy-write {
         margin-top: 20px;
     }

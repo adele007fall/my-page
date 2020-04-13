@@ -92,12 +92,12 @@
                         <template slot="btn">고객지원</template>
                         <template slot="body">
                             <ul>
-                                <li><a href="">자주 묻는 질문</a></li>
-                                <li><a href="">고객문의</a></li>
-                                <li><a href="">배송조회</a></li>
-                                <li><a href="">반품정책</a></li>
-                                <li><a href="">조립하기</a></li>
-                                <li><a href="">피드백</a></li>
+                                <li><a @click="$router.push({path:'/support'})">자주 묻는 질문</a></li>
+                                <li><a @click="$router.push({path:'/support'})">고객문의</a></li>
+                                <li><a @click="$router.push({path:'/support'})">배송조회</a></li>
+                                <li><a @click="$router.push({path:'/support'})">반품정책</a></li>
+                                <li><a @click="$router.push({path:'/support'})">조립하기</a></li>
+                                <li><a @click="$router.push({path:'/support'})">피드백</a></li>
                             </ul>
                         </template>
                     </dropdown>

@@ -129,7 +129,7 @@
             </a>
           </p> 
           <p class="aside_depth1"> 
-            <a href="#">
+            <a @click="$router.push({path:'/support'})">
               <span>
                 고객지원
               </span>
