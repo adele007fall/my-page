@@ -18,7 +18,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li><a href="" target="_blank">고객지원</a>
+                    <li><a @click="$router.push({path:'/support'})" target="_blank">고객지원</a>
                         <div>
                             <ul>
                                 <li><a href="">자주 묻는 질문</a></li>
@@ -88,7 +88,7 @@
                             </ul>
                         </template>
                     </dropdown>
-                    <dropdown>
+                    <dropdown> 
                         <template slot="btn">고객지원</template>
                         <template slot="body">
                             <ul>

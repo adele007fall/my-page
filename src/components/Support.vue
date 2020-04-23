@@ -1,17 +1,28 @@
 <template>
   <div class="support"> 
 
-      <h1>고객지원</h1>  
-    <input id="file-selector" ref="file" type="file" @change="handleFileUpload()">
-    <button @click="upload">업로드</button>
+      <h1 
+        data-aos="fade-up" 
+        data-aos-delay="50"
+        data-aos-duration="1000"
+        data-aos-once="true"
+      >고객지원</h1> 
+      <div class="file_upload" data-aos="fade-up" 
+                    data-aos-delay="50"
+                    data-aos-duration="1200"
+                    data-aos-once="true">
+        <p></p>
+        <input id="file-selector" ref="file" type="file" @change="handleFileUpload()">
+        <button @click="upload">업로드</button>
+      </div>
   </div>
 </template>
 <script>
 import AWS from "aws-sdk" 
+import '../assets/css/support.css'
 export default {
     data(){
         return {
-            text:null,
             file:null,
             albumBucketName : "moongoodstone",
             bucketRegion : "ap-northeast-2",
@@ -20,7 +31,6 @@ export default {
     }, 
     methods: {
       handleFileUpload() {
-          this.text = this.$refs.text.texts[0]
           this.file = this.$refs.file.files[0] 
         },
         upload() { 

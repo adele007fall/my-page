@@ -1,7 +1,12 @@
 @charset "utf-8"; 
+* {
 
+    font-family: "NanumSquare", serif !important;
+}
 /*         header start          */
-
+a {
+    cursor: pointer;
+}
 #header {
     background: #0058a3;
     width: 100%;
