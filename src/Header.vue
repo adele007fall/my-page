@@ -14,14 +14,14 @@
           <template slot="btn">모든 제품</template>
           <template slot="body">
             <ul>
-              <li><a href="" target="_blank">소파·의자테이블</a></li>
-              <li><a href="" target="_blank">침대·매트리스</a></li>
-              <li><a href="" target="_blank">요리·식기·주방기구</a></li>
-              <li><a href="" target="_blank">IKEA 키드</a></li>
-              <li><a href="" target="_blank">수납</a></li>
-              <li><a href="" target="_blank">조명</a></li>
-              <li><a href="" target="_blank">텍스타일·러그·커튼</a></li>
-              <li><a href="" target="_blank">홈데코·반려용품</a></li> 
+              <li><a @click="$router.push({path:'/today'})" target="_blank" >소파·의자테이블</a></li>
+              <li><a @click="$router.push({path:'/today'})" target="_blank">침대·매트리스</a></li>
+              <li><a @click="$router.push({path:'/today'})" target="_blank">요리·식기·주방기구</a></li>
+              <li><a @click="$router.push({path:'/today'})" target="_blank">IKEA 키드</a></li>
+              <li><a @click="$router.push({path:'/today'})" target="_blank">수납</a></li>
+              <li><a @click="$router.push({path:'/today'})" target="_blank">조명</a></li>
+              <li><a @click="$router.push({path:'/today'})" target="_blank">텍스타일·러그·커튼</a></li>
+              <li><a @click="$router.push({path:'/today'})" target="_blank">홈데코·반려용품</a></li> 
             </ul>
           </template>
         </dropdown>
@@ -29,7 +29,7 @@
           <template slot="btn">새로나온 제품</template>
           <template slot="body">
             <ul>
-              <li><a href="" target="_blank">새로나온 제품</a></li>  
+              <li><a @click="$router.push({path:'/today'})" target="_blank">새로나온 제품</a></li>  
             </ul>
             </template>
         </dropdown>
@@ -37,7 +37,7 @@
           <template slot="btn">많이 검색된 제품</template>
           <template slot="body"> 
             <ul>
-              <li><a href="" target="_blank">많이 검색된 제품</a></li> 
+              <li><a @click="$router.push({path:'/today'})" target="_blank">많이 검색된 제품</a></li> 
             </ul>
           </template>
         </dropdown>
@@ -79,38 +79,7 @@
           <li><a href="">홈퍼니싱 레시피</a></li>
           <li><a href="">신제품</a></li> 
         </ul>
-        <!-- aside depth start -->
-        <p class="aside_depth1" :class="{active:isActive_2}" v-on:click="downArrow_2"> 
-            <span @click="as_menu2 = !as_menu2">이달의 혜택
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.71,9.29,18.29,7.88,12,14.17,5.7,7.88,4.29,9.3,12,17Z"></path></svg> 
-            </span>  
-        </p>
-        <ul v-if="as_menu2" class="aside_depth2">
-          <li><a href="">집에서 행복하게</a></li>
-          <li><a href="">더 낮은 새로운 가격</a></li>
-          <li><a href="">평일 특가</a></li>
-          <li><a href="">똑똑한 주방 15% OFF</a></li>
-          <li><a href="">마지막 찬스</a></li>
-          <li><a href="">IKEA Family 특별가</a></li>
-          <li><a href="">홈퍼니싱 레시피</a></li>
-          <li><a href="">신제품</a></li> 
-        </ul>
-        <!-- aside depth start -->
-        <p class="aside_depth1" :class="{active:isActive_3}" v-on:click="downArrow_3"> 
-            <span v-on:click="as_menu3 = !as_menu3">이달의 혜택33 
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.71,9.29,18.29,7.88,12,14.17,5.7,7.88,4.29,9.3,12,17Z"></path></svg> 
-            </span>
-        </p>
-        <ul v-if="as_menu3" class="aside_depth2">
-          <li><a href="">집에서 행복하게</a></li>
-          <li><a href="">더 낮은 새로운 가격</a></li>
-          <li><a href="">평일 특가</a></li>
-          <li><a href="">똑똑한 주방 15% OFF</a></li>
-          <li><a href="">마지막 찬스</a></li>
-          <li><a href="">IKEA Family 특별가</a></li>
-          <li><a href="">홈퍼니싱 레시피</a></li>
-          <li><a href="">신제품</a></li> 
-        </ul>
+        <!-- aside depth start --> 
         <!-- aside depth start -->
         <p class="aside_depth1"> 
             <a href="#">

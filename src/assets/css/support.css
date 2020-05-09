@@ -10,11 +10,31 @@ h1 {
     text-align: center;
 } 
 .file_upload {
-    display: flex;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
 }
 #file-selector {
-    display: inline-flex;
+    padding-left: 40px;
+    display: inline-block;  
+    font-size: 20px;
+    line-height: 28px;
 }
-.file_upload button {
-    display: inline-flex;
+.file_upload button { 
+    padding-right: 40px;
+    float: right;
+    font-size: 20px;
+    line-height: 28px;
+}
+@media (max-width:768px){ 
+    #file-selector {
+        font-size: 14px;
+        line-height: 22px; 
+        width: 60%;
+    }
+    .file_upload button { 
+        font-size: 14px;
+        line-height: 28px;
+
+    }
 }

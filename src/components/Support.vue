@@ -10,8 +10,7 @@
       <div class="file_upload" data-aos="fade-up" 
                     data-aos-delay="50"
                     data-aos-duration="1200"
-                    data-aos-once="true">
-        <p></p>
+                    data-aos-once="true"> 
         <input id="file-selector" ref="file" type="file" @change="handleFileUpload()">
         <button @click="upload">업로드</button>
       </div>

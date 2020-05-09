@@ -225,4 +225,17 @@ a {
     #footer {
         height: 290px;
     }
+    .mobile .bp-dropdown__btn {
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .copy-write span {
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .mobile .bp-dropdown__body a {
+        font-size: 12px;
+        line-height: 20px;
+
+    }
 }
