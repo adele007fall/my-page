@@ -19,6 +19,9 @@ const Today = () => {
 const Support = () => {
   return import(/* webpackChunkName: "Support" */ '../components/Support.vue')
 }
+const Findstore = () => {
+  return import(/* webpackChunkName: "Findstore" */ '../components/Findstore.vue')
+}
 const routes = [
   {
     path: '/',
@@ -64,6 +67,14 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: Support
+  }, 
+  {
+    path: '/find',
+    name: 'Findstore',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: Findstore
   }, 
   {
     path: '/*',
