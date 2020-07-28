@@ -19,8 +19,8 @@ const Today = () => {
 const Support = () => {
   return import(/* webpackChunkName: "Support" */ '../components/Support.vue')
 }
-const Findstore = () => {
-  return import(/* webpackChunkName: "Findstore" */ '../components/Findstore.vue')
+const Find = () => {
+  return import(/* webpackChunkName: "Find" */ '../components/Find.vue')
 }
 const routes = [
   {
@@ -70,11 +70,11 @@ const routes = [
   }, 
   {
     path: '/find',
-    name: 'Findstore',
+    name: 'Find',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: Findstore
+    component: Find
   }, 
   {
     path: '/*',

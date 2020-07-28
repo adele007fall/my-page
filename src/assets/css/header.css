@@ -40,7 +40,7 @@
 /* dropdown 메뉴 */
 .always-show {
     border-top: 2px solid #ffdb00;
-    background: linear-gradient(#0270ce,#015aa7,#004d8e);
+    background: linear-gradient(#0270ce,#015aa7,#003074);
     display: flex;
     position: relative;
     height: 40px; 

@@ -81,7 +81,7 @@
       <h2>인기 상품</h2>
       <div class="main-sec-wrap">
         <div class="product-wrap">
-          <div class="product">
+          <div class="product" @click="Modal = true">
             <a href="#">
               <div class="prod_img produtc-img1"></div>
               <div>
@@ -90,7 +90,7 @@
                 <span>￦ 99,000/개</span>
               </div>
             </a> 
-          </div>
+          </div> 
           <div class="product">
             <a href="#">
               <div class="prod_img produtc-img2"></div>
@@ -322,6 +322,7 @@ export default {
     title: 'main', 
     data() {
       return {
+        Modal:false,
         AOS:null,
         Swiper: null,
         SwiperAnimation: null,

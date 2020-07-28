@@ -9,7 +9,7 @@
                     <li class=""><a href="" target="_blank">쇼핑하기</a>
                         <div>
                             <ul>
-                                <li><a href="">매장에서 쇼핑하기</a></li>
+                                <li><a @click="$router.push({path:'/find'})" target="_blank">매장에서 쇼핑하기</a></li>
                                 <li><a href="">온라인에서 쇼핑하기</a></li>
                                 <li><a href="">제품구매안내</a></li>
                                 <li><a href="">IKEA 품질보증</a></li>

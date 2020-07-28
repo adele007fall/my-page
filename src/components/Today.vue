@@ -87,7 +87,7 @@ import '../assets/css/common.css'
 import 'aos/dist/aos.css'
 
 export default {
-    components: {Parallax },
+    components: { Parallax },
     title: 'campaign',
     data() {
         return {
