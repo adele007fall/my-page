@@ -9,7 +9,7 @@
   "dependencies": {
     "aos": "^2.3.4",
     "aws-sdk": "^2.655.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bp-vuejs-dropdown": "^2.1.1",
     "core-js": "^3.6.4",
     "stylus-loader": "^3.0.2",
